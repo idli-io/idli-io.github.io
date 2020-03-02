@@ -1,1 +1,110 @@
-idli is baking please wait
+---
+layout: base
+---
+ 
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-xl-2 bg-light duik-sidebar navbar-expand-md">
+        <div class="d-flex d-md-none justify-content-between mb-5">
+          <!-- Sidebar Search -->
+          <form class="col form-inline input-group-sm">
+            <input class="js-search form-control form-control-sm w-100" type="text" placeholder="Search..." data-url="assets/include/json/autocomplete-data-for-documentation-search.json">
+          </form>
+          <!-- End Sidebar Search -->
+
+          <!-- Responsive Toggle Button -->
+          <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav" aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </button>
+          <!-- End Responsive Toggle Button -->
+        </div>
+
+        <!-- Sidebar Nav -->
+        <div class="collapse navbar-collapse" id="sidebar-nav">
+          <div class="js-scrollbar duik-sidebar-sticky">
+            <h5 class="duik-sidebar__heading">Introduction</h5>
+            <ul class="duik-sidebar__nav">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link active" href="#">About</a></li>
+            </ul>
+            <h5 class="duik-sidebar__heading">Components</h5>
+            <ul class="duik-sidebar__nav">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="/button.html">Button</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Sidebar Nav -->
+      </nav>
+      <!-- End Sidebar -->
+
+      <main class="ml-md-auto col-md-9 col-xl-10 px-4 pt-0 pt-md-11">
+        <div class="row pt-3">
+          <!-- Content Nav -->
+          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+            <ul class="js-scroll-nav duik-content-nav">
+              <li class="duik-content-nav__item"><a href="#doc-about">About</a></li>
+              <li class="duik-content-nav__item"><a href="#doc-getting-started">Getting Started</a></li>
+            </ul>
+          </div>
+          <!-- End Content Nav -->
+
+          <!-- Content -->
+          <div class="col-xl-10 order-xl-1 duik-content border-bottom">
+            <div class="border-bottom mb-7">
+              <h1>Introduction</h1>
+              <p class="lead mb-5"><b>IDLI component library</b> contains most used web components built using Stencil. So you don't need to include any additional framework dependencies, You can simple import required component js, and right away start using it.</p>
+            </div>
+
+            <!-- About -->
+            <div id="doc-about" class="mb-7">
+              <h2 class="h4">About <a class="js-anchor-link duik-anchorjs-link" href="#doc-about" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p>Idli components are beautiful Open Source web components under MIT license.</p>
+
+              <p>Idli components are maintained by <a href="https://shivajivarma.com">Shivaji Varma</a>. Do not miss any updates and announcements, stay tuned on our social pages:</p>
+
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Github">
+                  <a class="text-dark" target="_blank" href="https://www.github.com/idli-io">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- End About -->
+
+            <hr class="mt-7 mb-4">
+
+            <!-- Getting Started -->
+            <div id="doc-getting-started" class="mb-7">
+              <h2 class="h4">Getting Started <a class="js-anchor-link duik-anchorjs-link" href="#doc-getting-started" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p>Here are list of components available in the library.</p>
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="card">
+                    <a href="/button.html#"><img src="/assets/img/button.png" class="card-img-top" alt="Button"></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+         
+        </div>
+        <!-- End Content -->
+
+        {% include footer.html %}
+      </main>
+    </div>
+  </div>
+
+  <!-- Go to Top -->
+  <a class="js-go-to duik-go-to" href="javascript:;">
+    <span class="fa fa-arrow-up duik-go-to__inner"></span>
+  </a>
+  <!-- End Go to Top -->
+
