@@ -18,21 +18,47 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+
+title: Idli component library
+email: contact@idli.io
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Idli component library contains most used web components built using Stencil. So you don't need to include any additional framework dependencies, You can simple import required component js, and right away start using it.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://idli.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: idliio
+github_username:  idli-io
+
+include:
+  - .well-known
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
 
 # Build settings
-theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-assets
+
+assets:
+  compression: true
+  assets:
+    - "*.png"
+    - "_scss/styles.scss"
+  digest: true
+  defaults:
+    js: { integrity: false } # true on JEKYLL_ENV=production
+    css: { integrity: false } # true on JEKYLL_ENV=production
+    img: { integrity: false } # true on JEKYLL_ENV=production
+  plugins:
+    css: { autoprefixer: {}}
+    img: { optim: {}}
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
