@@ -1647,3 +1647,8 @@ div.code-toolbar > .toolbar a:hover {
   font-size: .875rem;
   line-height: 1.5;
 }
+
+
+.card img {
+  background: #f7f7f7;
+}
