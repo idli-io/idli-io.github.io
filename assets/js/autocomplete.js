@@ -12,7 +12,7 @@
         innerText = label + '<span class="duik-search__category">' + item.category + '</span>';
 
       if (item.url) {
-        return $('<li><a href="' + window.location.protocol + '//' + window.location.host + '/' + window.location.pathname.split('/')[1] + '/' + item.url + '">' + innerText + '</a></li>')
+        return $('<li><a href="' + window.location.protocol + '//' + window.location.host + item.url + '">' + innerText + '</a></li>')
           .appendTo(ul);
       } else {
         return $('<li>' + item.label + '</li>')
@@ -33,7 +33,7 @@
           delay: 0,
           source: data,
           select: function (event, ui) {
-            window.location = window.location.protocol + '//' + window.location.host + '/' + window.location.pathname.split('/')[1] + '/' + ui.item.url;
+            window.location = window.location.protocol + '//' + window.location.host + ui.item.url;
           }
         });
       });

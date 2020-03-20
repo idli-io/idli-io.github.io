@@ -21,8 +21,8 @@
 
 title: Idli component library
 email: contact@idli.io
-description: >- # this means to ignore newlines until "baseurl:"
-  Idli component library contains most used web components built using Stencil. So you don't need to include any additional framework dependencies, You can simple import required component js, and right away start using it.
+description: Idli component library contains most used web components built using Stencil. So you don't need to include any additional framework dependencies, You can simple import required component js, and right away start using it.
+tagline: Idli component library contains most used web components built using Stencil. So you don't need to include any additional framework dependencies, You can simple import required component js, and right away start using it.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://idli.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: idliio

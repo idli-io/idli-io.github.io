@@ -47,9 +47,32 @@
 
 	 <!-- Header -->
 	 <header class="duik-header">
-		<nav class="navbar navbar-dark fixed-top bg-primary flex-nowrap p-0">
-		  <a href="/" class="link-unstyled"><h1 class="text-white p-1 ml-2 h5">Idli <span class="font-weight-light">UI Components</span></h1></a>
-		</nav>
+		<!--nav class="navbar navbar-dark fixed-top bg-primary flex-nowrap p-0">
+		  <a href="/" class="link-unstyled"><h1 class="text-white p-1 ml-2 mb-0 h5">Idli <span class="font-weight-light">component library</span></h1></a>
+		</nav-->
+		 <nav class="navbar navbar-dark fixed-top bg-primary flex-nowrap p-0">
+			 <a class="navbar-brand bg-md-primary-darker col-md-3 col-xl-2 mr-0 py-3" href="/"><h1 class="text-white p-1 ml-2 mb-0 h5">Idli <span class="font-weight-light">component library</span></h1></a>
+
+			 <!-- Header Search -->
+			 <input class="js-search border-0 d-none d-md-block form-control form-control-sm w-100 ml-md-4" type="text" placeholder="Search..." aria-label="Search..." data-url="/assets/include/json/autocomplete-data-for-documentation-search.json">
+			 <!-- End Header Search -->
+
+
+			 <!-- Header Links -->
+			 <ul class="navbar-nav duik-header__nav small text-nowrap flex-row px-3 ml-0 ml-sm-3">
+				 {% if page.root %}
+				 <li class="nav-item ml-3 ml-sm-5">
+					 <a class="btn btn-sm btn-light text-primary" href="https://github.com/idli-io" title="Report Issue"><i class="fab fa-github mr-sm-1"></i> Github</a>
+				 </li>
+				 {% else %}
+				 <li class="nav-item ml-3 ml-sm-5">
+					 <a class="btn btn-sm btn-light text-primary" href="https://github.com/idli-io/{{page.github_project}}/issues" target="_blank" title="Report Issue"><i class="fab fa-github mr-sm-1"></i> Report Issue</a>
+				 </li>
+				 {% endif %}
+			 </ul>
+			 <!-- End Header Links -->
+
+		 </nav>
 	  </header>
 	  <!-- End Header -->
 
