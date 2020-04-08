@@ -23,5 +23,9 @@
     "category": "Components",
     "label": "Grid",
   "url": "/component/grid.html"
-  }
+  },{
+  "category": "Components",
+  "label": "Checkbox",
+  "url": "/component/checkbox.html"
+}
 ]

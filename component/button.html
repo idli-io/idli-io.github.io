@@ -99,25 +99,16 @@ github_project: idli-button
 
             <div class="output">
                 <idli-button size="lg">Large Button</idli-button>
-                <idli-button variant="primary" size="lg">Large Button</idli-button>
+                <idli-button>Medium Button</idli-button>
+                <idli-button size="sm">Small Button</idli-button>
             </div>
 
             <pre class="mb-4">
                   <code class="language-html" data-lang="html">&lt;idli-button size=&quot;lg&quot;&gt;Large Button&lt;/idli-button&gt;
-                  &lt;idli-button variant=&quot;primary&quot; size=&quot;lg&quot;&gt;Large Button&lt;/idli-button&gt;
+                  &lt;idli-button&gt;Medium Button&lt;/idli-button&gt;
+                  &lt;idli-button size=&quot;sm&quot;&gt;Small Button&lt;/idli-button&gt;
                   </code>
                 </pre>
-
-            <div class="output">
-                <idli-button size="sm">Small Button</idli-button>
-                <idli-button variant="primary" size="sm">Small Button</idli-button>
-            </div>
-
-            <pre class="mb-4">
-                    <code class="language-html" data-lang="html">&lt;idli-button size=&quot;sm&quot;&gt;Small Button&lt;/idli-button&gt;
-                    &lt;idli-button variant=&quot;primary&quot; size=&quot;sm&quot;&gt;Small Button&lt;/idli-button&gt;
-                    </code>
-                  </pre>
         </div>
 
         <!-- Disabled State -->
@@ -150,23 +141,25 @@ github_project: idli-button
 
             <div class="output">
 
-                <idli-button variant="default">Click me</idli-button>
-                <idli-button disabled>Disabled Button</idli-button>
+                <idli-button variant="default" id="click-me-btn">Click me</idli-button>
+                <idli-button disabled id="disabled-btn">Disabled Button</idli-button>
 
                 <script>
-                    document.querySelectorAll('#doc-events idli-button').forEach(function(el) {
-                        el.addEventListener('buttonClick', function(event) {
-                            alert("Button clicked");
-                        })
+                    document.querySelector('#click-me-btn').addEventListener('buttonClick', function(event) {
+                        alert("Button clicked");
+                    });
+                    document.querySelector('#disabled-btn').addEventListener('buttonClick', function(event) {
+                        alert("Button clicked"); // this will not be fired
                     });
                 </script>
             </div>
             <pre class="mb-4">
                     <code class="language-html" data-lang="html">&lt;script&gt;
-document.querySelectorAll('#doc-events idli-button').forEach(function(buttonEl) {
-    buttonEl.addEventListener('buttonClick', function(event) {
-        alert("Button clicked");
-    })
+document.querySelector('#click-me-btn').addEventListener('buttonClick', function(event) {
+    alert("Button clicked");
+});
+document.querySelector('#disabled-btn').addEventListener('buttonClick', function(event) {
+    alert("Button clicked"); // this will not be fired
 });
 &lt;/script&gt;
                     </code>
