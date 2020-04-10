@@ -27,5 +27,9 @@
   "category": "Components",
   "label": "Checkbox",
   "url": "/component/checkbox.html"
+},{
+  "category": "Script Editor",
+  "label": "Checkbox",
+  "url": "/component/script-editor.html"
 }
 ]

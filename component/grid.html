@@ -50,8 +50,9 @@ github_project: idli-grid
   &lt;script src='https://unpkg.com/@idli/idli-grid@{{ page.version }}/dist/idli-grid.js'&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-   &lt;idli-input label=&quot;Name&quot; placeholder=&quot;John Snow&quot;&gt;&lt;/idli-input&gt;
-   &lt;idli-input variant=&quot;dashed&quot; label=&quot;Name&quot; placeholder=&quot;John Snow&quot;&gt;&lt;/idli-input&gt;
+   &lt;idli-grid id="grid"
+              column-config='[{"name":"name","label":"Name","width":300,"fixed":true}{"name":"company","label":"Company","width":500}]'
+              data='[{"_id":"5e7118ddce4b3d577956457f", "name":"Courtney","company":"XYQAG"},{"_id":"5e7118dd240daa9a2f209fd9","company":"STRALOY"}]'&gt;&lt;/idli-grid&gt;
 &lt;/body&gt;
 &lt;/html&gt;
                 </code>
