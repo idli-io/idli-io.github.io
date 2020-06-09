@@ -1,6 +1,25 @@
 ---
 layout: default
 root: true
+components:
+    -   name: Button
+        link: /component/table.html
+        img: /assets/img/button.png
+    -   name: Checkbox
+        link: /component/checkbox.html
+        img: /assets/img/checkbox.png
+    -   name: Input
+        link: /component/input.html
+        img: /assets/img/input.png
+    -   name: Number
+        link: /component/number.html
+        img: /assets/img/number.png
+    -   name: Table
+        link: /component/table.html
+        img: /assets/img/table.png
+    -   name: Script Editor
+        link: /component/script-editor.html
+        img: /assets/img/script-editor.png
 ---
 
 <style>
@@ -70,57 +89,20 @@ root: true
                         <p>Here are list of components available in the library.</p>
 
                         <div class="row">
+                            {% for component in page.components %}
                             <div class="col-md-3">
                                 <div class="card">
-                                    <a href="/component/button.html#"><img class="card-img-top"
-                                                                           src="/assets/img/button.png"
-                                                                           alt="Button"></a>
+                                    <a href="{{component.link}}#"><img class="card-img-top"
+                                                                           src="{{component.img}}"
+                                                                           alt="{{component.name}}"></a>
                                     <div class="card-body">
-                                        <h5 class="card-title">Button</h5>
-                                        <a href="/component/button.html#" class="btn btn-sm btn-primary">View</a>
+                                        <h5 class="card-title">{{component.name}}</h5>
+                                        <a href="{{component.link}}#" class="btn btn-sm btn-primary">View</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <a href="/component/input.html#"><img class="card-img-top"
-                                                                          src="/assets/img/input.png" alt="Button"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Input</h5>
-                                        <a href="/component/input.html#" class="btn btn-sm btn-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <a href="/component/table.html#"><img style="margin-top: 25px" class="card-img-top"
-                                                                         src="/assets/img/grid.png" alt="Button"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Table</h5>
-                                        <a href="/component/table.html#" class="btn btn-sm btn-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <a href="/component/table.html#"><img style="margin-top: 25px" class="card-img-top"
-                                                                          src="/assets/img/grid.png" alt="Button"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Checkbox</h5>
-                                        <a href="/component/checkbox.html#" class="btn btn-sm btn-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <a href="/component/table.html#"><img style="margin-top: 25px" class="card-img-top"
-                                                                          src="/assets/img/grid.png" alt="Button"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Script Editor</h5>
-                                        <a href="/component/script-editor.html#" class="btn btn-sm btn-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
+
                         </div>
 
                     </div>
